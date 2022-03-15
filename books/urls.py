@@ -5,7 +5,10 @@ from . import views
 
 urlpatterns = [
     # path('', views.Index.as_view(), name='index'),
-    path('home', views.home, name='home'),
+    path('home', views.Home.as_view(), name='home'),
+    path('add', views.add, name='add'),
+    path('edit<str:pk>', views.edit, name='edit'),
+    path('delete<str:pk>', views.delete, name='delete'),
     # path('edit', views.edit, name='edit'),
     # path('delete', views.delete, name='delete'),
 ]
